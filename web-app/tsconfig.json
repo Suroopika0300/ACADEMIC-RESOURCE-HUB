@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "target": "es5", // Ensures ES5 output
+    "module": "esnext", // Use modern module system
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "react-jsx", // For React 17+ or React 18+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "outDir": "./dist", // Ensures the output directory is correct
+    "baseUrl": ".", // Root directory for paths
+    "paths": {
+      "@kongu/quizz-app": ["../quizz-app/src"],
+      "@kongu/compiler-app": ["../compiler-app/src"]
+    },
+    "lib": ["dom", "esnext"] // Explicitly specify runtime libraries
+  },
+  "include": [
+    "src/**/*", // Includes all files in src directory
+    "src/**/*.test.ts", // Optionally include test files
+    "src/**/*.test.tsx"
+  ],
+  "exclude": [
+    "node_modules", // Exclude dependencies
+    "dist" // Exclude output directory
+  ]
+}
